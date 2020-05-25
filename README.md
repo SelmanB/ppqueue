@@ -1,5 +1,5 @@
 # ppqueue
-Multithreaded and MT-safe priority queue as a drop-in replacement for `std::priortiy_queue` for most purposes.
+Multithreaded and MT-safe priority queue as a drop-in replacement for `std::priortiy_queue`.
 
 ## Algorithm
 Every ppqueue object has two associated thread in addition to the creator thread. These threads are constructed and destructed with the object. Heap operations are performed by these threads after O(1) pushing/popping by a calling thread. All interfaces to the object are mutex-protected for MT-safety.
